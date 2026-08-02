@@ -1,75 +1,127 @@
-# React + TypeScript + Vite
+<h1 align="center">
+Hi 👋 I'm Muhammad Isfak
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align="center">
+Software Engineer • Full Stack Developer • DevOps Enthusiast
+</h3>
 
-Currently, two official plugins are available:
+<p align="center">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Building scalable software, enterprise applications and cloud-native solutions.
 
-## React Compiler
+</p>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# 🚀 Portfolio
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🌐 Live Website
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+https://isfak1537.github.io/portfolio/
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 👨‍💻 About Me
 
-```
+- 🎓 B.Sc. in Computer Science & Engineering
+- 🏫 Daffodil International University
+- 📊 CGPA: 3.60
+- 💻 Full Stack Developer
+- ☁️ Learning DevOps & Cloud
+- 🚀 Building enterprise software using React, Node.js and PostgreSQL
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 🛠 Tech Stack
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Frontend
 
-```
+- React
+- TypeScript
+- JavaScript
+- Tailwind CSS
+- Vite
+
+### Backend
+
+- Node.js
+- Express.js
+
+### Database
+
+- PostgreSQL
+- MySQL
+
+### DevOps
+
+- Docker
+- Linux
+- Git
+- GitHub
+
+---
+
+# 🚀 Featured Projects
+
+## Toyota ERP Platform
+
+Enterprise Resource Planning System
+
+React • Node.js • PostgreSQL • Docker
+
+---
+
+## Small Business Inventory Lite
+
+Inventory Management SaaS
+
+---
+
+## Survival Game
+
+Java
+
+---
+
+## Drive-X
+
+Desktop Application
+
+---
+
+## Harbor Defense Simulation
+
+Java Game
+
+---
+
+## Knowledge Vault
+
+Personal Knowledge Management Platform
+
+---
+
+## AI Tic Tac Toe
+
+Artificial Intelligence Project
+
+---
+
+# 📫 Contact
+
+Email
+
+isfaksikder2001@gmail.com
+
+LinkedIn
+
+https://linkedin.com/in/isfak-sikder-0680ab336
+
+Portfolio
+
+https://isfak1537.github.io/portfolio/
+
+---
+
+⭐ Thanks for visiting my profile.
