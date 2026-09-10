@@ -1,72 +1,106 @@
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
+import {
+  SiC,
+  SiCplusplus,
+  SiPython,
+  SiDart,
+  SiFlutter,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiVite,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiExpress,
+  SiPostgresql,
+  SiMysql,
+  SiDocker,
+  SiLinux,
+  SiGit,
+  SiGithub,
+  SiVercel,
+} from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
 
-const technologies = [
-  { name: "Frontend", x: "50%", y: "12%", color: "bg-cyan-400" },
-  { name: "Backend", x: "82%", y: "30%", color: "bg-violet-400" },
-  { name: "DevOps", x: "84%", y: "72%", color: "bg-green-400" },
-  { name: "Cloud", x: "50%", y: "90%", color: "bg-blue-400" },
-  { name: "Database", x: "16%", y: "72%", color: "bg-orange-400" },
-  { name: "AI", x: "18%", y: "30%", color: "bg-pink-400" },
-  { name: "Systems", x: "50%", y: "50%", color: "bg-yellow-400" },
+interface Skill {
+  name: string;
+  icon: React.ReactNode;
+}
+
+const skills: Skill[] = [
+  { name: "C", icon: <SiC size={36} /> },
+  { name: "C++", icon: <SiCplusplus size={36} /> },
+  { name: "Python", icon: <SiPython size={36} /> },
+  { name: "Dart", icon: <SiDart size={36} /> },
+  { name: "Flutter", icon: <SiFlutter size={36} /> },
+  { name: "JavaScript", icon: <SiJavascript size={36} /> },
+  { name: "TypeScript", icon: <SiTypescript size={36} /> },
+  { name: "React", icon: <SiReact size={36} /> },
+  { name: "Vite", icon: <SiVite size={36} /> },
+  { name: "Tailwind", icon: <SiTailwindcss size={36} /> },
+  { name: "Node.js", icon: <SiNodedotjs size={36} /> },
+  { name: "Express", icon: <SiExpress size={36} /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={36} /> },
+  { name: "MySQL", icon: <SiMysql size={36} /> },
+  { name: "Hive NoSQL", icon: <FaDatabase size={36} /> },
+  { name: "Docker", icon: <SiDocker size={36} /> },
+  { name: "Linux", icon: <SiLinux size={36} /> },
+  { name: "Git", icon: <SiGit size={36} /> },
+  { name: "GitHub", icon: <SiGithub size={36} /> },
+  { name: "Vercel", icon: <SiVercel size={36} /> },
 ];
 
 export default function Radar() {
   return (
-    <section id="skills" className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
+    <section
+      id="skills"
+      aria-label="Technical skills"
+      className="mt-6 lg:mt-16 pb-14 lg:pb-20 px-5 lg:px-24 mx-auto max-w-7xl relative"
+    >
+      <motion.h2
+        className="text-2xl lg:text-3xl text-center font-light text-black"
+        initial={{ opacity: 0, y: -15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        viewport={{ once: true }}
+      >
+        My <span className="font-semibold">Skills</span>
+      </motion.h2>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20 text-center text-5xl font-black"
-        >
-          Technology Radar
-        </motion.h2>
-
-        <div className="flex justify-center">
-
-          <div className="relative h-[550px] w-[550px] rounded-full border border-cyan-500/20">
-
-            <div className="absolute inset-12 rounded-full border border-white/10" />
-            <div className="absolute inset-24 rounded-full border border-white/10" />
-            <div className="absolute inset-36 rounded-full border border-white/10" />
-
-            <div className="absolute left-1/2 top-0 h-full w-px bg-white/10 -translate-x-1/2" />
-            <div className="absolute top-1/2 left-0 h-px w-full bg-white/10 -translate-y-1/2" />
-
-            {technologies.map((tech) => (
-              <motion.div
-                key={tech.name}
-                whileHover={{ scale: 1.2 }}
-                animate={{
-                  scale: [1, 1.15, 1],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                }}
-                className="absolute"
-                style={{
-                  left: tech.x,
-                  top: tech.y,
-                  transform: "translate(-50%,-50%)",
-                }}
-              >
-                <div
-                  className={`${tech.color} h-5 w-5 rounded-full shadow-lg shadow-cyan-400/50`}
-                />
-
-                <p className="mt-3 whitespace-nowrap text-sm text-zinc-300">
-                  {tech.name}
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 lg:gap-5 text-sm lg:text-base font-normal mt-8 lg:mt-14 justify-center place-items-center">
+        {skills.map((skill, i) => (
+          <motion.div
+            key={skill.name}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.45,
+              ease: [0.16, 1, 0.3, 1],
+              delay: i * 0.03,
+            }}
+            viewport={{ once: true, margin: "-30px" }}
+            className="w-full flex justify-center"
+          >
+            <Tilt
+              tiltMaxAngleX={18}
+              tiltMaxAngleY={18}
+              perspective={900}
+              scale={1.05}
+              transitionSpeed={800}
+              className="w-full flex justify-center"
+            >
+              <div className="group border border-black/80 rounded-xl p-3 h-28 w-28 lg:h-36 lg:w-36 flex flex-col items-center justify-center gap-2 lg:gap-3 cursor-pointer transition-all duration-300 bg-white/90 hover:bg-black hover:text-white hover:shadow-xl hover:border-black">
+                <div className="transition-transform duration-300 group-hover:scale-110">
+                  {skill.icon}
+                </div>
+                <p className="text-xs sm:text-sm font-medium tracking-tight text-center">
+                  {skill.name}
                 </p>
-              </motion.div>
-            ))}
-
-          </div>
-
-        </div>
-
+              </div>
+            </Tilt>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

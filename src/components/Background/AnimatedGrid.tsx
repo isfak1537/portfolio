@@ -1,14 +1,10 @@
 export default function AnimatedGrid() {
   return (
     <div
-      className="
-      pointer-events-none
-      absolute
-      inset-0
-      opacity-30
-      [background-image:linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)]
-      [background-size:45px_45px]
-      "
-    />
+      aria-hidden="true"
+      className="pointer-events-none fixed inset-0 z-0 opacity-40 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,#000_60%,transparent_100%)]"
+    >
+      <div className="h-full w-full [background-image:linear-gradient(to_right,rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.03)_1px,transparent_1px)] [background-size:3.5rem_3.5rem]" />
+    </div>
   );
 }
