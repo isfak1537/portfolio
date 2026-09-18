@@ -16,10 +16,10 @@ const statsData: StatItem[] = [
   {
     id: "projects",
     icon: Code,
-    value: 6,
+    value: 7,
     suffix: "+",
     label: "Projects Engineered",
-    sublabel: "4 live deployments on Vercel"
+    sublabel: "5 live deployments on Vercel"
   },
   {
     id: "technologies",

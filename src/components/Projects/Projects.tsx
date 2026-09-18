@@ -76,7 +76,8 @@ function ProjectCard({ project, onSelect }: CardProps) {
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
                     className="p-2 rounded-full bg-black text-white transition-transform duration-200 hover:scale-110 shadow-sm"
-                    aria-label={`Live demo of ${project.title}`}
+                    aria-label={`Live Demo for ${project.title}`}
+                    title="Live Demo"
                   >
                     <TbExternalLink size={15} />
                   </a>
@@ -87,7 +88,8 @@ function ProjectCard({ project, onSelect }: CardProps) {
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                   className="p-2 rounded-full border border-black/30 hover:bg-black hover:text-white hover:border-black transition-all duration-300"
-                  aria-label={`Source code of ${project.title}`}
+                  aria-label={`GitHub repository for ${project.title}`}
+                  title="GitHub"
                 >
                   <BsGithub size={15} />
                 </a>
@@ -183,6 +185,7 @@ function ProjectModal({
               className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-black hover:bg-black/80 text-white text-sm font-semibold shadow-md transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
+              aria-label={`Live Demo for ${project.title}`}
             >
               <TbExternalLink size={16} /> Live Demo
             </motion.a>
@@ -194,8 +197,9 @@ function ProjectModal({
             className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl border-2 border-black text-black text-sm font-semibold hover:bg-black hover:text-white transition-all duration-300"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
+            aria-label={`GitHub repository for ${project.title}`}
           >
-            <BsGithub size={16} /> View Code
+            <BsGithub size={16} /> GitHub
           </motion.a>
         </div>
       </motion.div>

@@ -16,6 +16,30 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
+    title: "AI Career Anxiety Prediction System",
+    description:
+      "Undergraduate research decision-support system featuring a leak-safe comparative machine learning pipeline, SHAP explainability, and an interactive dual-engine web application analyzing AI workforce disruption perceptions across 2,036 university students.",
+    category: "Machine Learning / Explainable AI",
+    technologies: ["Python", "Scikit-Learn", "SHAP", "FastAPI", "JavaScript", "Vercel"],
+    github: "https://github.com/isfak1537/AI-Career-Anxiety-System",
+    live: "https://ai-career-anxiety-system-4.vercel.app/",
+    status: "Completed",
+    featured: true,
+    hasLiveDemo: true,
+    architectureHighlights: [
+      "Strict zero-leakage ColumnTransformer pipeline encapsulating imputation, scaling, and one-hot encoding fitted exclusively on training splits",
+      "Dual-engine architecture combining an authoritative FastAPI serverless backend with a lightweight zero-dependency client fallback",
+      "SHAP (Shapley Additive exPlanations) attribution framework projecting dummy indicator contributions back to 17 verified research features"
+    ],
+    keyFeatures: [
+      "Interactive probability risk scoring and real-time classification across institutional cohorts",
+      "Dynamic SHAP waterfall visualizations demonstrating localized positive and negative feature attributions",
+      "Comparative multi-model evaluation including Gradient Boosting and Soft Voting Ensembles",
+      "Empirical research validation grounded in secondary survey analysis with ethical and non-clinical guardrails"
+    ]
+  },
+  {
+    id: 2,
     title: "Small Business Inventory Lite",
     description:
       "Cross-platform inventory management application with offline-first architecture, Hive local storage, stock management, sales entry, low-stock monitoring, and business metrics.",
@@ -39,7 +63,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "DriveX Transportation",
     description:
       "Ride-calling transportation web application featuring location-oriented workflows, user dashboards, ride-related interfaces, payment flow and responsive frontend experiences.",
@@ -63,7 +87,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "UTSHOBKORI",
     description:
       "Event management platform connecting users with venues, catering and decoration service providers through a responsive web application.",
@@ -87,7 +111,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Cinematic Harbor Defense Simulation",
     description:
       "C++ systems/game simulation with a deployable WebAssembly/Web build, demonstrating systems programming, memory management, game logic and performance-oriented engineering.",
@@ -111,7 +135,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: "Toyota ERP Platform",
     description:
       "Enterprise Resource Planning platform featuring inventory, suppliers, purchasing, sales, authentication and reporting.",
@@ -134,7 +158,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Survival Game with Adaptive AI",
     description:
       "2D survival game featuring reinforcement-learning enemies using Q-Learning to adapt to player strategies.",
